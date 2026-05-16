@@ -1,0 +1,156 @@
+{
+  "theme": "dark",
+  "archetype": "5",
+  "archetype_name": "Jewel & Luxury / Performance Pro Hybrid",
+  "brand": {
+    "name": "Raibi Jamila World Cup 2026 Edition",
+    "vibe": "Raw cultural pride meets global stage energy, Apple-level polish with Nike World Cup campaign energy in Casablanca medinas.",
+    "emotion": "Passionate, Devoted, Energetic, Premium, Cinematic"
+  },
+  "colors": {
+    "backgrounds": {
+      "base": "#0A0A0A",
+      "surface": "#121212",
+      "overlay_dark": "rgba(10, 10, 10, 0.7)",
+      "overlay_light": "rgba(255, 255, 255, 0.05)",
+      "zellige_texture": "#161616"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A",
+      "inverse": "#0A0A0A"
+    },
+    "brand": {
+      "magenta": "#D91C5C",
+      "crimson": "#B91C1C",
+      "morocco_green": "#006233",
+      "gold": "#D4AF37",
+      "sand": "#D2B48C"
+    },
+    "ui": {
+      "border": "rgba(255, 255, 255, 0.1)",
+      "hover": "rgba(255, 255, 255, 0.15)",
+      "focus": "rgba(212, 175, 55, 0.5)",
+      "error": "#EF4444"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading_latin": "'Bricolage Grotesque', sans-serif",
+      "heading_arabic": "'Tajawal', sans-serif",
+      "body_latin": "'Inter', sans-serif",
+      "body_arabic": "'Cairo', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "scales": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter leading-none",
+      "h2": "text-4xl sm:text-5xl font-bold tracking-tight leading-tight",
+      "h3": "text-2xl sm:text-3xl font-semibold tracking-tight",
+      "body": "text-base sm:text-lg text-secondary leading-relaxed",
+      "overline": "text-xs font-bold tracking-[0.2em] uppercase",
+      "huge_number": "text-7xl sm:text-8xl md:text-9xl font-black tracking-tighter"
+    }
+  },
+  "spacing": {
+    "section_y": "py-24 sm:py-32",
+    "section_px": "px-6 sm:px-12 md:px-24",
+    "gap_grid": "gap-8 sm:gap-12 md:gap-16",
+    "gap_flex": "gap-4 sm:gap-6"
+  },
+  "media": {
+    "product": {
+      "cup_top_down": "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/o7ealwlk_ChatGPT%20Image%2017%20mai%202026%2C%2000_43_43.png",
+      "splash": "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/toue4pvu_ChatGPT%20Image%2017%20mai%202026%2C%2000_46_18.png",
+      "cup_floating": "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/l6u7fzgm_ChatGPT%20Image%2017%20mai%202026%2C%2000_32_17.png",
+      "stadium_qr": "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/5kxcq9l5_ChatGPT%20Image%2017%20mai%202026%2C%2001_08_25.png"
+    },
+    "backgrounds": {
+      "hero_mosque_stadium": "https://static.prod-images.emergentagent.com/jobs/85733746-01b2-41a6-ae32-f15e344a54cc/images/53ea40fdee33a4747373be6b347da1a8680e7b95c3994bf6f989e1862132356e.png",
+      "zellige_texture": "https://static.prod-images.emergentagent.com/jobs/85733746-01b2-41a6-ae32-f15e344a54cc/images/9c18e91aa518d7db73a1048f914f98c28f704bd22f5e21b7440ed3ad7ff03208.png",
+      "split_journey": "https://static.prod-images.emergentagent.com/jobs/85733746-01b2-41a6-ae32-f15e344a54cc/images/d32349be37a418db724935df0860a58e3192329cc3350fe120a5dee318551d87.png",
+      "fans_celebration": "https://static.prod-images.emergentagent.com/jobs/85733746-01b2-41a6-ae32-f15e344a54cc/images/2d5343f10944e0e6479d514c739815e59860d88410fba2ba3c326e96e8faa2aa.png"
+    }
+  },
+  "layout_sections": [
+    {
+      "name": "Header",
+      "description": "Sticky nav with multi-language toggle (FR/AR/EN) and glassmorphism effect.",
+      "components": ["LanguageSwitcher", "NavLinks", "CTAButton"],
+      "styles": "fixed w-full z-50 backdrop-blur-xl bg-black/60 border-b border-white/10"
+    },
+    {
+      "name": "Hero Cinematic",
+      "description": "Parallax floating product cup. Double exposure Mosque-Stadium background.",
+      "components": ["ParallaxLayer", "FloatingProduct", "TaglineReveal"],
+      "styles": "relative min-h-screen flex items-center justify-center overflow-hidden bg-black",
+      "interactions": "Cup rotates and drifts on scroll. Smoke effect via Framer Motion or background texture.",
+      "assets": ["cup_floating", "hero_mosque_stadium"]
+    },
+    {
+      "name": "The Journey (Horizontal Scroll)",
+      "description": "Scroll-triggered horizontal timeline comparing Marrakech streets to US stadiums.",
+      "components": ["HorizontalScrollWrapper", "DistanceCounter", "SplitScreenVisual"],
+      "styles": "h-[200vh] relative bg-[#0A0A0A]",
+      "interactions": "Sticky container pins while content moves horizontally. Counter increments to 8,000 km.",
+      "assets": ["split_journey"]
+    },
+    {
+      "name": "La Saveur (Product Close-Up)",
+      "description": "Macro view of product with AR-style ingredient callouts.",
+      "components": ["ProductMacroView", "ARCalloutPoints", "TextureOverlay"],
+      "styles": "py-32 bg-[#121212] relative",
+      "interactions": "Tilt effect on mousemove/scroll. Hotspots reveal zellige pattern and pomegranate splash.",
+      "assets": ["splash", "cup_top_down"]
+    },
+    {
+      "name": "When Lions Roar",
+      "description": "Crowd celebration section with interactive Audio Visualizer.",
+      "components": ["VideoBackground", "FeelTheRoarButton", "AudioVisualizerCanvas", "ConfettiLayer"],
+      "styles": "relative min-h-screen flex items-center justify-center overflow-hidden",
+      "interactions": "Click 'Feel the Roar' -> requests microphone -> displays D3/Canvas waveform synced to audio volume in red/green. Loud noise triggers confetti.",
+      "assets": ["fans_celebration"]
+    },
+    {
+      "name": "Limited Edition 3D",
+      "description": "3D-like rotating presentation of the World Cup edition cup and QR scan.",
+      "components": ["RotatingPackshot", "BadgeCallout", "QRScanCard"],
+      "styles": "py-24 bg-gradient-to-b from-[#0A0A0A] to-[#1A0B10]",
+      "interactions": "Smooth auto-rotation, hover to pause.",
+      "assets": ["stadium_qr"]
+    },
+    {
+      "name": "Footer",
+      "description": "Store locator, newsletter, social feed.",
+      "components": ["StoreLocator", "NewsletterForm", "SocialFeedCarousel"],
+      "styles": "py-24 px-8 bg-black border-t border-white/10"
+    }
+  ],
+  "components_spec": {
+    "buttons": {
+      "primary": "bg-crimson text-white font-bold px-8 py-4 rounded-none hover:bg-magenta transition-colors duration-300 tracking-wide uppercase",
+      "secondary": "bg-transparent border border-gold text-gold font-bold px-8 py-4 hover:bg-gold/10 transition-colors uppercase",
+      "icon_button": "p-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition-all"
+    },
+    "cards": {
+      "glass": "backdrop-blur-xl bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-all",
+      "solid": "bg-[#161616] p-8 border border-white/5"
+    },
+    "dividers": {
+      "zellige": "h-16 w-full bg-[url('media.backgrounds.zellige_texture')] bg-repeat-x opacity-40"
+    }
+  },
+  "animation_guidelines": {
+    "libraries_required": ["framer-motion", "lucide-react", "react-fast-marquee", "lenis"],
+    "rules": {
+      "scroll": "Use Lenis for premium smooth scroll feel.",
+      "parallax": "Use framer-motion useScroll and useTransform for element parallax.",
+      "transitions": "Use 'paper tear' SVG masks for section transitions.",
+      "hover": "Scale slightly (1.02) and increase border opacity on interactive elements."
+    }
+  },
+  "accessibility": {
+    "data_testids_required": true,
+    "contrast": "Ensure white text on magenta/crimson meets APCA contrast. Use dark overlays on busy backgrounds."
+  }
+}
