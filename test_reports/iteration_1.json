@@ -1,0 +1,44 @@
+{
+  "summary": "Backend testing of Raibi Jamila WC 2026 API. Created pytest suite covering 13 cases across all 8 endpoints (root, newsletter subscribe/count, roar log/stats, social feed, stores w/ country filters). 12/13 passed initially; 1 critical bug found and fixed in POST /api/newsletter duplicate-handling path. After fix: 13/13 pass.",
+  "backend_issues": {
+    "critical": [
+      {
+        "endpoint": "POST /api/newsletter",
+        "issue": "Duplicate email path raised TypeError 500 — NewsletterEntry(**existing, timestamp=...) collided because 'existing' dict already contained 'timestamp' key. FIXED by parsing timestamp inside the existing dict before unpacking.",
+        "priority": "CRITICAL"
+      }
+    ],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_raibi_api.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Review the server.py fix to subscribe_newsletter (lines ~158-168) — testing agent applied a minimal fix to make duplicate POSTs idempotent (returns existing entry with 200)."
+  ],
+  "critical_code_review_comments": [
+    "server.py: timestamp stored as ISO string in Mongo but Pydantic model uses datetime; current code reconverts on read — acceptable but consider storing as native datetime (Mongo BSON supports it) to avoid the parse dance.",
+    "POST /api/newsletter idempotency returns the original entry verbatim including original locale/country; if user resubscribes with different locale, those updates are silently dropped. Consider upsert with $set on locale/country.",
+    "No rate-limiting on POST /api/roar or /api/newsletter — could be spammed; acceptable for MVP but flag for production.",
+    "datetime.fromisoformat may fail on timezone-suffixed strings in older Python; current backend is 3.11 so OK.",
+    "/api/social/feed and /api/stores are static in-code lists (matches stated design)."
+  ],
+  "updated_files": [
+    "/app/backend/server.py",
+    "/app/backend/tests/test_raibi_api.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "success_rate": {"backend": "100%", "frontend": "not tested (per request)"},
+  "test_credentials": "none required",
+  "seed_data_creation": "Test emails prefixed with TEST_ and random uuid suffix were inserted into db.newsletter; a handful of roar events into db.roars. No cleanup performed (lightweight rows).",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Backend at https://moroccan-trophy.preview.emergentagent.com/api is fully green after the duplicate-newsletter fix. Pytest file at /app/backend/tests/test_raibi_api.py covers all endpoints incl. _id leak check, idempotency, 422 validation, country filtering, roar increment. Re-run with: pytest /app/backend/tests/test_raibi_api.py -v",
+  "rca of the issue": "POST /api/newsletter (duplicate email path) — RCA: in server.py line 161, NewsletterEntry was constructed as `NewsletterEntry(**existing, timestamp=<expr>)`. The `existing` dict (returned by Mongo find_one) already contained a `timestamp` key, so passing `timestamp=` as an additional kwarg produced `TypeError: got multiple values for keyword argument 'timestamp'` → FastAPI surfaced as 500. Reproduction: POST /api/newsletter twice with the same email. Mitigation applied: rewrote the duplicate branch to first coerce `existing['timestamp']` to a datetime (handling str/datetime/missing), then `return NewsletterEntry(**existing)`."
+}
