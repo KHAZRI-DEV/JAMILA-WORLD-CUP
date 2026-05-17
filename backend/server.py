@@ -127,10 +127,10 @@ SOCIAL_POSTS = [
         "author": "Amina Choukri",
         "handle": "@amina_c",
         "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Amina",
-        "content": "Édition limitée World Cup acquise ✅ Collector forever — رايبي ديال صح",
-        "image": None,
-        "likes": 4892,
-        "location": "Fès, MA",
+        "content": "Au stade ce soir, drapeau à la main, le cœur qui tape comme un derby. ديما المغرب 🇲🇦",
+        "image": "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/e3dnwg17_image.png",
+        "likes": 18420,
+        "location": "Stadium · Doha",
         "timestamp": "1d"
     }
 ]
