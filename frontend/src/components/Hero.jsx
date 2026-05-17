@@ -140,10 +140,10 @@ export const Hero = () => {
         {/* Right: Floating cup */}
         <motion.div
           style={{ y: cupY, rotate: cupRotate, scale: cupScale }}
-          className="lg:col-span-5 relative h-[500px] sm:h-[620px] lg:h-[820px] flex items-center justify-center"
+          className="lg:col-span-5 relative h-[460px] sm:h-[560px] lg:h-[720px] flex items-center justify-center"
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-[85%] h-[85%] rounded-full bg-gradient-to-br from-[#D91C5C]/50 to-[#B91C1C]/25 blur-3xl" />
+            <div className="w-[82%] h-[82%] rounded-full bg-gradient-to-br from-[#D91C5C]/45 to-[#B91C1C]/20 blur-3xl" />
           </div>
           <motion.img
             initial={{ opacity: 0, scale: 0.8 }}
@@ -152,7 +152,7 @@ export const Hero = () => {
             src={CUP}
             alt="Raibi Jamila World Cup 2026 cup"
             data-testid="hero-cup"
-            className="relative z-10 h-full w-auto max-w-none object-contain float-cup drop-shadow-[0_40px_80px_rgba(217,28,92,0.6)]"
+            className="relative z-10 max-h-[92%] max-w-full object-contain float-cup drop-shadow-[0_35px_70px_rgba(217,28,92,0.55)]"
           />
         </motion.div>
       </div>
