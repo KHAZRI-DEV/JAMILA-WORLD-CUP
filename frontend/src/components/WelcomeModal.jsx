@@ -83,7 +83,7 @@ export const WelcomeModal = ({ open, email, onClose }) => {
                   href="#edition"
                   onClick={onClose}
                   data-testid="welcome-cta"
-                  className="inline-flex items-center gap-3 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-6 py-4 transition-all shimmer"
+                  className="inline-flex items-center gap-3 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-6 py-4 transition-all shimmer rounded-md"
                 >
                   <QrCode className="w-4 h-4" />
                   {c.cta}

@@ -74,7 +74,7 @@ export const Edition = () => {
             <Link
               to="/scan"
               data-testid="edition-cta"
-              className="inline-flex items-center gap-3 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all shimmer"
+              className="inline-flex items-center gap-3 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all shimmer rounded-md"
             >
               <QrCode className="w-4 h-4" />
               {t.edition.cta}

@@ -29,13 +29,13 @@ export const Saveur = () => {
         alt=""
         className="absolute -right-20 top-20 w-[500px] opacity-30 pointer-events-none"
       />
-      <div className="smoke-blob w-[600px] h-[600px] bg-[#D91C5C] -left-40 top-1/2 opacity-30" />
+      <div className="smoke-blob w-[600px] h-[600px] bg-[#D91C5C] -left-40 top-1/2 opacity-30 rounded-md" />
 
       <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-12 items-center">
         {/* Left: Cup + callouts */}
         <div className="lg:col-span-7 relative h-[600px] flex items-center justify-center">
           <motion.div style={{ rotate: tilt }} className="relative">
-            <div className="absolute inset-0 bg-[#D91C5C]/40 blur-[120px]" />
+            <div className="absolute inset-0 bg-[#D91C5C]/40 blur-[120px] rounded-md" />
             <img src={CUP} alt="cup macro" className="relative w-72 md:w-96 drop-shadow-[0_40px_80px_rgba(217,28,92,0.6)]" />
           </motion.div>
 
@@ -61,7 +61,7 @@ export const Saveur = () => {
                 >
                   <div className="glass px-4 py-3 max-w-[240px]">
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-[#D91C5C] flex items-center justify-center flex-shrink-0">
+                      <div className="w-8 h-8 bg-[#D91C5C] flex items-center justify-center flex-shrink-0 rounded-md">
                         <Icon className="w-4 h-4 text-white" />
                       </div>
                       <div>

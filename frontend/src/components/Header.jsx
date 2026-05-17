@@ -80,7 +80,7 @@ export const Header = () => {
           <a
             href="#footer"
             data-testid="header-cta"
-            className="hidden sm:inline-block bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-xs tracking-[0.15em] uppercase px-5 py-3 transition-colors shimmer"
+            className="hidden sm:inline-block bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-xs tracking-[0.15em] uppercase px-5 py-3 transition-colors shimmer rounded-md"
           >
             {t.nav.cta}
           </a>

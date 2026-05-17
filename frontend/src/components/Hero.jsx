@@ -38,7 +38,7 @@ export const Hero = () => {
       </motion.div>
 
       {/* Magenta smoke blobs */}
-      <div className="smoke-blob w-[600px] h-[600px] bg-[#D91C5C] top-[-100px] left-[-150px] opacity-30" />
+      <div className="smoke-blob w-[600px] h-[600px] bg-[#D91C5C] top-[-100px] left-[-150px] opacity-30 rounded-md" />
       <div className="smoke-blob w-[500px] h-[500px] bg-[#006233] bottom-[-100px] right-[-100px] opacity-20" />
       <div className="smoke-blob w-[300px] h-[300px] bg-[#FF1F75] top-1/3 right-1/4 opacity-20" />
 
@@ -104,7 +104,7 @@ export const Hero = () => {
             <a
               href="#edition"
               data-testid="hero-cta-primary"
-              className="group inline-flex items-center gap-3 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all shimmer"
+              className="group inline-flex items-center gap-3 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all shimmer rounded-md"
             >
               {t.hero.cta}
               <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-1" />

@@ -106,7 +106,7 @@ export const FanScan = () => {
   return (
     <main data-testid="fanscan-page" className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Ambient blobs */}
-      <div className="smoke-blob w-[600px] h-[600px] bg-[#D91C5C] -top-32 -left-32 opacity-40" />
+      <div className="smoke-blob w-[600px] h-[600px] bg-[#D91C5C] -top-32 -left-32 opacity-40 rounded-md" />
       <div className="smoke-blob w-[500px] h-[500px] bg-[#006233] -bottom-32 -right-32 opacity-25" />
       <div className="smoke-blob w-[400px] h-[400px] bg-[#FF1F75] top-1/3 right-1/4 opacity-25" />
 
@@ -153,7 +153,7 @@ export const FanScan = () => {
               </div>
 
               <form onSubmit={submit} className="max-w-2xl space-y-4" dir={locale === "ar" ? "rtl" : "ltr"}>
-                <div className="flex flex-col sm:flex-row gap-3 border border-white/15 focus-within:border-[#D91C5C] transition-colors">
+                <div className="flex flex-col sm:flex-row gap-3 border border-white/15 focus-within:border-[#D91C5C] transition-colors rounded-md">
                   <input
                     type="text"
                     value={name}
@@ -166,7 +166,7 @@ export const FanScan = () => {
                   <button
                     type="submit"
                     data-testid="scan-submit"
-                    className="bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all shimmer flex items-center justify-center gap-2"
+                    className="bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all shimmer flex items-center justify-center gap-2 rounded-md"
                   >
                     {t.cta} <ArrowRight className="w-4 h-4" />
                   </button>
@@ -255,7 +255,7 @@ export const FanScan = () => {
                 <button
                   onClick={reset}
                   data-testid="scan-reset"
-                  className="inline-flex items-center gap-2 border border-white/15 hover:border-[#D91C5C] text-white/70 hover:text-white px-5 py-3 text-xs tracking-[0.2em] uppercase font-bold transition-colors"
+                  className="inline-flex items-center gap-2 border border-white/15 hover:border-[#D91C5C] text-white/70 hover:text-white px-5 py-3 text-xs tracking-[0.2em] uppercase font-bold transition-colors rounded-md"
                 >
                   <RotateCcw className="w-3 h-3" /> {t.again}
                 </button>
@@ -342,7 +342,7 @@ export const FanScan = () => {
                 <Link
                   to="/"
                   data-testid="scan-home"
-                  className="inline-flex items-center gap-2 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-6 py-4 transition-all shimmer"
+                  className="inline-flex items-center gap-2 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-6 py-4 transition-all shimmer rounded-md"
                 >
                   {locale === "ar" ? "العودة إلى الموقع" : locale === "en" ? "Back to the experience" : "Retour à l'expérience"}
                 </Link>
@@ -353,7 +353,7 @@ export const FanScan = () => {
                     }
                   }}
                   data-testid="scan-share"
-                  className="inline-flex items-center gap-2 border border-white/15 hover:border-[#D4AF37] text-white px-6 py-4 text-xs tracking-[0.2em] uppercase font-bold transition-colors"
+                  className="inline-flex items-center gap-2 border border-white/15 hover:border-[#D4AF37] text-white px-6 py-4 text-xs tracking-[0.2em] uppercase font-bold transition-colors rounded-md"
                 >
                   {t.share}
                 </button>

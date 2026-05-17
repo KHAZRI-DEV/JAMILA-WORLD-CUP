@@ -37,7 +37,7 @@ export const Countdown = () => {
 
   return (
     <section data-testid="countdown-section" className="relative py-24 bg-gradient-to-b from-black via-[#13050a] to-black overflow-hidden grain">
-      <div className="smoke-blob w-[500px] h-[500px] bg-[#D91C5C] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 opacity-30" />
+      <div className="smoke-blob w-[500px] h-[500px] bg-[#D91C5C] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 opacity-30 rounded-md" />
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-12 text-center space-y-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -78,7 +78,7 @@ export const Countdown = () => {
         <a
           href="#edition"
           data-testid="countdown-cta"
-          className="inline-flex items-center gap-3 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all shimmer"
+          className="inline-flex items-center gap-3 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all shimmer rounded-md"
         >
           {L.cta}
         </a>

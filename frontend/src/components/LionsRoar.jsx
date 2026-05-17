@@ -157,7 +157,7 @@ export const LionsRoar = () => {
     >
       <img src={FANS} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
-      <div className="smoke-blob w-[700px] h-[700px] bg-[#D91C5C] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40" />
+      <div className="smoke-blob w-[700px] h-[700px] bg-[#D91C5C] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40 rounded-md" />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 text-center space-y-12">
         <motion.div
@@ -212,7 +212,7 @@ export const LionsRoar = () => {
             onClick={active ? stop : start}
             className={`group inline-flex items-center gap-3 font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all ${
               active ? "bg-white text-black hover:bg-white/90" : "bg-[#D91C5C] hover:bg-[#FF1F75] text-white shimmer pulse-magenta"
-            }`}
+            } rounded-md`}
           >
             {active ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
             {active ? t.roar.stop : t.roar.btn}

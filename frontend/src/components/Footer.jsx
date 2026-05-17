@@ -115,7 +115,7 @@ export const Footer = () => {
             <p className="text-white/60 max-w-md">
               {locale === "ar" ? "احصل على الأخبار، عروض الإصدار المحدود، ومحتوى حصري." : locale === "en" ? "Get drops, news, and exclusive Atlas Lions content." : "Reçois les drops, news, et contenu exclusif des Lions de l'Atlas."}
             </p>
-            <form onSubmit={submit} className="flex max-w-md border border-white/15 focus-within:border-[#D91C5C] transition-colors">
+            <form onSubmit={submit} className="flex max-w-md border border-white/15 focus-within:border-[#D91C5C] transition-colors rounded-md">
               <input
                 type="email"
                 required
@@ -129,7 +129,7 @@ export const Footer = () => {
                 type="submit"
                 disabled={loading}
                 data-testid="newsletter-submit"
-                className="bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-xs tracking-[0.2em] uppercase px-6 transition-colors disabled:opacity-60"
+                className="bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-xs tracking-[0.2em] uppercase px-6 transition-colors disabled:opacity-60 rounded-md"
               >
                 {loading ? "..." : t.footer.submit}
               </button>
@@ -157,7 +157,7 @@ export const Footer = () => {
                     onClick={() => setCountry(c.v)}
                     className={`px-4 py-2 text-xs font-bold transition-all ${
                       country === c.v ? "bg-[#D91C5C] text-white" : "text-white/60 hover:text-white"
-                    }`}
+                    } rounded-md`}
                   >
                     {c.l}
                   </button>
@@ -175,7 +175,7 @@ export const Footer = () => {
                         <MapPin className="w-3 h-3" /> {s.city}, {s.country}
                       </div>
                     </div>
-                    <div className={`text-[10px] font-bold tracking-wider px-2 py-1 ${s.country === "MA" ? "bg-[#D91C5C]/20 text-[#FF1F75]" : "bg-[#006233]/20 text-[#00A050]"}`}>
+                    <div className={`text-[10px] font-bold tracking-wider px-2 py-1 ${s.country === "MA" ? "bg-[#D91C5C]/20 text-[#FF1F75]" : "bg-[#006233]/20 text-[#00A050]"} rounded-md`}>
                       {s.country}
                     </div>
                   </div>
