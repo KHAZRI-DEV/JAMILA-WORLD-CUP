@@ -34,7 +34,7 @@ export const Header = () => {
           <img
             src="https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/sq9r3n38_71ee3f5d-17b7-4128-867b-c73f9f495b26.png"
             alt="Raibi Jamila"
-            className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-[0_6px_20px_rgba(217,28,92,0.7)] transition-transform duration-300 group-hover:scale-110"
+            className="w-20 h-20 md:w-28 md:h-28 object-contain drop-shadow-[0_6px_24px_rgba(217,28,92,0.7)] transition-transform duration-300 group-hover:scale-110"
           />
           <div className="leading-none">
             <div className="font-display font-black text-white text-base tracking-tight">Raibi Jamila</div>
