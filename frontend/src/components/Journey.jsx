@@ -84,14 +84,14 @@ export const Journey = () => {
             color="#D91C5C"
             city="Casablanca"
             img="https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/0ev18d1h_pexels-rahib-oussama-2147578878-29735561.jpg"
-            tag="Hassan II Mosque"
+            tag="Casa-Anfa skyline"
           />
           <Panel
             label={t.journey.morocco}
             color="#D91C5C"
             city="Rabat"
             img="https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/2opv7q65_pexels-reda-captures-1210576448-30460910.jpg"
-            tag="Mohammed VI Tower"
+            tag="Tour Mohammed VI"
           />
 
           {/* Center cup */}
@@ -140,18 +140,27 @@ export const Journey = () => {
 const Panel = ({ label, color, city, img, tag }) => (
   <div className="flex-shrink-0 w-[320px] md:w-[420px] h-[420px] md:h-[520px] relative overflow-hidden group" data-testid={`journey-panel-${city}`}>
     <img src={img} alt={city} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-    <div className="absolute top-4 left-4 px-3 py-1 backdrop-blur-md border" style={{ borderColor: color, color }}>
-      <span className="text-[10px] tracking-[0.25em] uppercase font-bold">{label}</span>
-    </div>
-    <div className="absolute bottom-6 left-6 right-6 space-y-1.5">
+    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30" />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent" />
+
+    {/* Top: City name BIG + small label underneath */}
+    <div className="absolute top-5 left-5 right-5">
       <div
-        className="font-display font-black text-4xl md:text-5xl tracking-tighter leading-none text-white"
-        style={{ textShadow: "0 6px 24px rgba(0,0,0,0.85), 0 0 40px rgba(217,28,92,0.4)" }}
+        className="font-display font-black text-4xl md:text-5xl tracking-tighter leading-none uppercase text-white"
+        style={{ textShadow: "0 4px 20px rgba(0,0,0,0.85), 0 0 30px rgba(217,28,92,0.5)" }}
       >
         {city}
       </div>
-      <div className="text-xs text-white/85 uppercase tracking-[0.2em] font-bold">{tag}</div>
+      <div className="mt-2 inline-block px-2 py-1 border" style={{ borderColor: color, color }}>
+        <span className="text-[10px] tracking-[0.25em] uppercase font-bold">{label}</span>
+      </div>
+    </div>
+
+    {/* Bottom: caption tag */}
+    <div className="absolute bottom-6 left-6 right-6">
+      <div className="text-sm text-white font-bold uppercase tracking-[0.2em]" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.9)" }}>
+        {tag}
+      </div>
     </div>
   </div>
 );
