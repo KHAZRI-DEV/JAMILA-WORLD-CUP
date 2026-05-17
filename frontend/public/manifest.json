@@ -1,0 +1,17 @@
+{
+  "short_name": "Jamila",
+  "name": "Jamila World Cup 2026",
+  "description": "Jamila World Cup 2026 — Morocco USA 2026 limited edition experience.",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}
