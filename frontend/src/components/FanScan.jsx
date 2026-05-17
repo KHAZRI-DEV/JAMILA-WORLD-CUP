@@ -270,7 +270,7 @@ export const FanScan = () => {
                   playsInline
                   muted={muted}
                   data-testid="scan-video"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain"
                 />
 
                 {/* Name overlay — animated banner on the stadium video */}
