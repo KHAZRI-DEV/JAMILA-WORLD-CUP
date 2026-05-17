@@ -3,25 +3,18 @@ import { motion } from "framer-motion";
 import { useI18n } from "../i18n";
 import { Calendar } from "lucide-react";
 
-// Target: 3 days, 12 hours, 45 minutes from initial load
-const initialTarget = () => {
-  const t = new Date();
-  t.setDate(t.getDate() + 3);
-  t.setHours(t.getHours() + 12);
-  t.setMinutes(t.getMinutes() + 45);
-  return t.getTime();
-};
+// Target: Morocco's next match — June 14, 2026 at 18:00 UTC
+const TARGET = new Date("2026-06-14T18:00:00Z").getTime();
 
 const labelMap = {
-  fr: { title: "Prochain match du Maroc dans", d: "Jours", h: "Heures", m: "Minutes", s: "Secondes", cta: "Découvrir l'expérience" },
-  en: { title: "Next Morocco match in", d: "Days", h: "Hours", m: "Minutes", s: "Seconds", cta: "Discover the experience" },
-  ar: { title: "مباراة المغرب القادمة في", d: "أيام", h: "ساعات", m: "دقائق", s: "ثوان", cta: "اكتشف التجربة" },
+  fr: { title: "Prochain match du Maroc dans", date: "14 juin 2026 · Coup d'envoi", d: "Jours", h: "Heures", m: "Minutes", s: "Secondes", cta: "Découvrir l'expérience" },
+  en: { title: "Next Morocco match in", date: "June 14, 2026 · Kickoff", d: "Days", h: "Hours", m: "Minutes", s: "Seconds", cta: "Discover the experience" },
+  ar: { title: "مباراة المغرب القادمة في", date: "14 يونيو 2026 · صافرة البداية", d: "أيام", h: "ساعات", m: "دقائق", s: "ثوان", cta: "اكتشف التجربة" },
 };
 
 export const Countdown = () => {
   const { locale } = useI18n();
   const L = labelMap[locale] || labelMap.fr;
-  const [target] = useState(initialTarget);
   const [now, setNow] = useState(Date.now());
 
   useEffect(() => {
@@ -29,7 +22,7 @@ export const Countdown = () => {
     return () => clearInterval(id);
   }, []);
 
-  const diff = Math.max(0, target - now);
+  const diff = Math.max(0, TARGET - now);
   const days = Math.floor(diff / 86400000);
   const hours = Math.floor((diff % 86400000) / 3600000);
   const mins = Math.floor((diff % 3600000) / 60000);
@@ -60,6 +53,7 @@ export const Countdown = () => {
           <h2 className={`font-display font-black text-3xl md:text-5xl tracking-tighter leading-tight ${locale === "ar" ? "font-arabic" : ""}`}>
             {L.title}
           </h2>
+          <div className="text-sm md:text-base tracking-[0.2em] text-white/50 uppercase pt-1">{L.date}</div>
         </motion.div>
 
         <div className="grid grid-cols-4 gap-3 md:gap-6 max-w-3xl mx-auto" dir="ltr">

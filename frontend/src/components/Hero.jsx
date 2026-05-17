@@ -4,7 +4,7 @@ import { useI18n } from "../i18n";
 import { ArrowDown, PlayCircle } from "lucide-react";
 
 const CUP = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/9r2fj0yr_e07ae7a0-1604-4c43-8c7b-787878b869ce.png";
-const BG = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/u82h3pig_ChatGPT%20Image%2017%20mai%202026%2C%2001_02_30.png";
+const BG = "https://static.prod-images.emergentagent.com/jobs/85733746-01b2-41a6-ae32-f15e344a54cc/images/53ea40fdee33a4747373be6b347da1a8680e7b95c3994bf6f989e1862132356e.png";
 
 export const Hero = () => {
   const { t, locale } = useI18n();
@@ -31,10 +31,10 @@ export const Hero = () => {
         <img
           src={BG}
           alt=""
-          className="w-full h-[120%] object-cover opacity-80"
+          className="w-full h-[120%] object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/60" />
       </motion.div>
 
       {/* Magenta smoke blobs */}
