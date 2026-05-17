@@ -165,7 +165,7 @@ export const Footer = () => {
               </div>
             </div>
             <div className="grid sm:grid-cols-2 gap-3 max-h-[420px] overflow-y-auto no-scrollbar pr-2">
-              {stores.map((s) => (
+              {(Array.isArray(stores) ? stores : []).map((s) => (
                 <div key={s.id} data-testid={`store-${s.id}`} className="border border-white/10 hover:border-[#D91C5C]/50 p-4 transition-colors group">
                   <div className="flex items-start justify-between gap-3">
                     <div>
