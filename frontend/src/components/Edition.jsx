@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useI18n } from "../i18n";
 import { QrCode, Trophy } from "lucide-react";
@@ -70,14 +71,14 @@ export const Edition = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
-            <a
-              href="#footer"
+            <Link
+              to="/scan"
               data-testid="edition-cta"
               className="inline-flex items-center gap-3 bg-[#D91C5C] hover:bg-[#FF1F75] text-white font-bold text-sm tracking-[0.2em] uppercase px-8 py-5 transition-all shimmer"
             >
               <QrCode className="w-4 h-4" />
               {t.edition.cta}
-            </a>
+            </Link>
             <div className="text-xs text-white/50 max-w-[200px]">{t.edition.stock}</div>
           </div>
         </motion.div>

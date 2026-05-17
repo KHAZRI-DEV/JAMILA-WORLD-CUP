@@ -10,6 +10,7 @@ import { LionsRoar } from "./components/LionsRoar";
 import { Edition } from "./components/Edition";
 import { Countdown } from "./components/Countdown";
 import { Footer } from "./components/Footer";
+import { FanScan } from "./components/FanScan";
 
 const Landing = () => (
   <main data-testid="landing-page" className="relative bg-black text-white">
@@ -36,6 +37,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Landing />} />
+            <Route path="/scan" element={<FanScan />} />
           </Routes>
         </BrowserRouter>
       </div>
