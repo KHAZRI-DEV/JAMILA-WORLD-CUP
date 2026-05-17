@@ -31,9 +31,11 @@ export const Header = () => {
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#top" data-testid="logo" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#FF1F75] via-[#D91C5C] to-[#B91C1C] flex items-center justify-center magenta-glow">
-            <span className="font-display font-black text-white text-sm">RJ</span>
-          </div>
+          <img
+            src="https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/sq9r3n38_71ee3f5d-17b7-4128-867b-c73f9f495b26.png"
+            alt="Raibi Jamila"
+            className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(217,28,92,0.6)] transition-transform duration-300 group-hover:scale-110"
+          />
           <div className="leading-none">
             <div className="font-display font-black text-white text-base tracking-tight">Raibi Jamila</div>
             <div className="text-[10px] tracking-[0.25em] text-[#D4AF37] uppercase">World Cup 2026</div>
