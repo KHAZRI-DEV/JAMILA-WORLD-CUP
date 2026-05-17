@@ -140,13 +140,18 @@ export const Journey = () => {
 const Panel = ({ label, color, city, img, tag }) => (
   <div className="flex-shrink-0 w-[320px] md:w-[420px] h-[420px] md:h-[520px] relative overflow-hidden group" data-testid={`journey-panel-${city}`}>
     <img src={img} alt={city} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
     <div className="absolute top-4 left-4 px-3 py-1 backdrop-blur-md border" style={{ borderColor: color, color }}>
       <span className="text-[10px] tracking-[0.25em] uppercase font-bold">{label}</span>
     </div>
-    <div className="absolute bottom-6 left-6 right-6 space-y-1">
-      <div className="font-display font-black text-3xl md:text-4xl tracking-tighter leading-none">{city}</div>
-      <div className="text-xs text-white/70 uppercase tracking-wider">{tag}</div>
+    <div className="absolute bottom-6 left-6 right-6 space-y-1.5">
+      <div
+        className="font-display font-black text-4xl md:text-5xl tracking-tighter leading-none text-white"
+        style={{ textShadow: "0 6px 24px rgba(0,0,0,0.85), 0 0 40px rgba(217,28,92,0.4)" }}
+      >
+        {city}
+      </div>
+      <div className="text-xs text-white/85 uppercase tracking-[0.2em] font-bold">{tag}</div>
     </div>
   </div>
 );
