@@ -31,16 +31,16 @@ export const Hero = () => {
         <img
           src={BG}
           alt=""
-          className="w-full h-[120%] object-cover opacity-60"
+          className="w-full h-[120%] object-cover opacity-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/5 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-transparent to-transparent" />
       </motion.div>
 
       {/* Magenta smoke blobs */}
-      <div className="smoke-blob w-[600px] h-[600px] bg-[#D91C5C] top-[-100px] left-[-150px]" />
-      <div className="smoke-blob w-[500px] h-[500px] bg-[#006233] bottom-[-100px] right-[-100px] opacity-30" />
-      <div className="smoke-blob w-[300px] h-[300px] bg-[#FF1F75] top-1/3 right-1/4 opacity-40" />
+      <div className="smoke-blob w-[600px] h-[600px] bg-[#D91C5C] top-[-100px] left-[-150px] opacity-30" />
+      <div className="smoke-blob w-[500px] h-[500px] bg-[#006233] bottom-[-100px] right-[-100px] opacity-20" />
+      <div className="smoke-blob w-[300px] h-[300px] bg-[#FF1F75] top-1/3 right-1/4 opacity-20" />
 
       {/* Content */}
       <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 pt-32 pb-20 min-h-[100vh] grid lg:grid-cols-12 gap-8 items-center">
