@@ -4,7 +4,7 @@ import { useI18n } from "../i18n";
 import { ArrowDown, PlayCircle } from "lucide-react";
 
 const CUP = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/9r2fj0yr_e07ae7a0-1604-4c43-8c7b-787878b869ce.png";
-const BG = "https://static.prod-images.emergentagent.com/jobs/85733746-01b2-41a6-ae32-f15e344a54cc/images/53ea40fdee33a4747373be6b347da1a8680e7b95c3994bf6f989e1862132356e.png";
+const BG = "/hero-generated.png";
 
 export const Hero = () => {
   const { t, locale } = useI18n();
