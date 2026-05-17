@@ -3,8 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useI18n } from "../i18n";
 import { Sparkles, Flame, Award } from "lucide-react";
 
-const SPLASH = "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/toue4pvu_ChatGPT%20Image%2017%20mai%202026%2C%2000_46_18.png";
-const CUP = "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/o7ealwlk_ChatGPT%20Image%2017%20mai%202026%2C%2000_43_43.png";
+const SPLASH = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/hir074lt_e67de1a7-ed1d-4992-b846-a4ae6e45f486.png";
+const CUP = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/fu1pusvr_7ffd2ac4-660d-4b97-9438-11cfa6405b5f.png";
 
 export const Saveur = () => {
   const { t, locale } = useI18n();

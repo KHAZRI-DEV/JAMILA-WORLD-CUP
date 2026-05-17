@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useI18n } from "../i18n";
 import { MapPin, Heart, Instagram, Twitter, Music } from "lucide-react";
 import { toast, Toaster } from "sonner";
+import { WelcomeModal } from "./WelcomeModal";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -14,6 +15,8 @@ export const Footer = () => {
   const [stores, setStores] = useState([]);
   const [posts, setPosts] = useState([]);
   const [country, setCountry] = useState("all");
+  const [welcomeOpen, setWelcomeOpen] = useState(false);
+  const [welcomeEmail, setWelcomeEmail] = useState("");
 
   useEffect(() => {
     axios.get(`${API}/social/feed`).then((r) => setPosts(r.data)).catch(() => {});
@@ -31,6 +34,8 @@ export const Footer = () => {
     try {
       await axios.post(`${API}/newsletter`, { email, locale });
       toast.success(t.footer.thanks);
+      setWelcomeEmail(email);
+      setWelcomeOpen(true);
       setEmail("");
     } catch (err) {
       toast.error("Invalid email");
@@ -42,6 +47,7 @@ export const Footer = () => {
   return (
     <footer id="footer" data-testid="site-footer" className="relative bg-black overflow-hidden">
       <Toaster theme="dark" position="top-center" />
+      <WelcomeModal open={welcomeOpen} email={welcomeEmail} onClose={() => setWelcomeOpen(false)} />
       <div className="zellige-divider" />
 
       {/* Social wall */}

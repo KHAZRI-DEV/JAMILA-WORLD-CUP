@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { useI18n } from "../i18n";
 import { QrCode, Trophy } from "lucide-react";
 
-const STADIUM_QR = "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/5kxcq9l5_ChatGPT%20Image%2017%20mai%202026%2C%2001_08_25.png";
-const CUP_FLOAT = "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/l6u7fzgm_ChatGPT%20Image%2017%20mai%202026%2C%2000_32_17.png";
-const CUP_TOP = "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/o7ealwlk_ChatGPT%20Image%2017%20mai%202026%2C%2000_43_43.png";
+const STADIUM_QR = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/oy8dcj13_4706d7be-a4b2-4f3e-a690-c9933aa253f6.png";
+const CUP_FLOAT = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/9r2fj0yr_e07ae7a0-1604-4c43-8c7b-787878b869ce.png";
+const CUP_TOP = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/fu1pusvr_7ffd2ac4-660d-4b97-9438-11cfa6405b5f.png";
 
 export const Edition = () => {
   const { t, locale } = useI18n();

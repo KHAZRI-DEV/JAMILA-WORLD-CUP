@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useI18n } from "../i18n";
 
 const SPLIT_BG = "https://static.prod-images.emergentagent.com/jobs/85733746-01b2-41a6-ae32-f15e344a54cc/images/d32349be37a418db724935df0860a58e3192329cc3350fe120a5dee318551d87.png";
-const CUP = "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/o7ealwlk_ChatGPT%20Image%2017%20mai%202026%2C%2000_43_43.png";
+const CUP = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/fu1pusvr_7ffd2ac4-660d-4b97-9438-11cfa6405b5f.png";
 
 const CounterNumber = ({ target = 8000 }) => {
   const ref = useRef(null);
@@ -76,22 +76,22 @@ export const Journey = () => {
             label={t.journey.morocco}
             color="#D91C5C"
             city="Marrakech"
-            img="https://images.unsplash.com/photo-1539020140153-e479b8c6cce6?w=800&q=80"
-            tag="Jemaa el-Fna · golden hour"
+            img="https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/479dslj6_pexels-meriem-a-2149355236-30682505.jpg"
+            tag="Koutoubia · golden hour"
           />
           <Panel
             label={t.journey.morocco}
             color="#D91C5C"
             city="Casablanca"
-            img="https://images.unsplash.com/photo-1518730518541-d0843268c287?w=800&q=80"
+            img="https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/0ev18d1h_pexels-rahib-oussama-2147578878-29735561.jpg"
             tag="Hassan II Mosque"
           />
           <Panel
             label={t.journey.morocco}
             color="#D91C5C"
             city="Rabat"
-            img="https://images.unsplash.com/photo-1565952608-a8e69bf3d4e1?w=800&q=80"
-            tag="Kasbah des Oudayas"
+            img="https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/2opv7q65_pexels-reda-captures-1210576448-30460910.jpg"
+            tag="Mohammed VI Tower"
           />
 
           {/* Center cup */}

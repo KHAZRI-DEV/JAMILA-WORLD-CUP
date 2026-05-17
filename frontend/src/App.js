@@ -8,6 +8,7 @@ import { Journey } from "./components/Journey";
 import { Saveur } from "./components/Saveur";
 import { LionsRoar } from "./components/LionsRoar";
 import { Edition } from "./components/Edition";
+import { Countdown } from "./components/Countdown";
 import { Footer } from "./components/Footer";
 
 const Landing = () => (
@@ -22,6 +23,8 @@ const Landing = () => (
     <LionsRoar />
     <div className="zellige-divider" />
     <Edition />
+    <div className="zellige-divider" />
+    <Countdown />
     <Footer />
   </main>
 );

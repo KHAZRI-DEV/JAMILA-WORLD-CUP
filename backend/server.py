@@ -73,7 +73,7 @@ SOCIAL_POSTS = [
         "handle": "@yassine_atlas",
         "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Yassine",
         "content": "Atlas Lions, vous portez nos rêves ! 🦁 Raibi à la main, drapeau au cœur. #MoroccoUSA2026",
-        "image": "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/5kxcq9l5_ChatGPT%20Image%2017%20mai%202026%2C%2001_08_25.png",
+        "image": "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/oy8dcj13_4706d7be-a4b2-4f3e-a690-c9933aa253f6.png",
         "likes": 4821,
         "location": "Casablanca, MA",
         "timestamp": "2h"

@@ -4,8 +4,8 @@ import { useI18n } from "../i18n";
 import { Mic, MicOff, Volume2 } from "lucide-react";
 import axios from "axios";
 
-const CUP = "https://customer-assets.emergentagent.com/job_85733746-01b2-41a6-ae32-f15e344a54cc/artifacts/o7ealwlk_ChatGPT%20Image%2017%20mai%202026%2C%2000_43_43.png";
-const FANS = "https://static.prod-images.emergentagent.com/jobs/85733746-01b2-41a6-ae32-f15e344a54cc/images/2d5343f10944e0e6479d514c739815e59860d88410fba2ba3c326e96e8faa2aa.png";
+const CUP = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/fu1pusvr_7ffd2ac4-660d-4b97-9438-11cfa6405b5f.png";
+const FANS = "https://customer-assets.emergentagent.com/job_moroccan-trophy/artifacts/n13snhxw_ChatGPT%20Image%2017%20mai%202026%2C%2000_19_16.png";
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 export const LionsRoar = () => {
